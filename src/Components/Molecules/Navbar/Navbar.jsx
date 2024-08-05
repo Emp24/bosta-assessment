@@ -1,8 +1,12 @@
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import logo from "../../../assets/Images/image.svg";
+import Dropdown from "../Dropdown/Dropdown";
+import { ShipmentSearch } from "../ShipmentSearch/ShipmentSearch";
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
+
+  const options = ["Option 1", "Option 2", "Option 3"];
   const changeLanguage = () => {
     i18n.language === "en"
       ? i18n.changeLanguage("ar")
@@ -27,7 +31,9 @@ export const Navbar = () => {
           <p className="center-div-item">{t("navbar.contactSales")}</p>
         </div>
         <div className="center-div">
-          <p className="red-btn">track</p>
+          <Dropdown options={options} direction="ltr">
+            <ShipmentSearch />
+          </Dropdown>
           <p className="center-div-item">{t("navbar.login")}</p>
           <p className="red-btn" onClick={changeLanguage}>
             {i18n.language === "en" ? "عربي" : "ENG"}
