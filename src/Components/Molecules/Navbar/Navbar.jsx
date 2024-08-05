@@ -13,6 +13,7 @@ export const Navbar = () => {
     } else {
       localStorage.setItem("language", "en");
     }
+    window.location.reload();
   };
   return (
     <div className="main-container">
