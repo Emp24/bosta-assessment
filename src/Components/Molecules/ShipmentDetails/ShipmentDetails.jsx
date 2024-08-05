@@ -1,54 +1,42 @@
 import { useTranslation } from "react-i18next";
 import "./ShipmentDetails.css";
+import { ShipmentDetailsRow } from "../ShipmentDetailsRow/ShipmentDetailsRow";
+import { ExtractDate } from "../../../utils/ExtractDate";
 
-const ShipmentRow = ({ branch, date, time, details, header }) => {
-  return (
-    <div className={header ? "shipment-row-header" : "shipment-row"}>
-      <p>{branch}</p>
-      <p>{date}</p>
-      <p> {time}</p>
-      <p> {details}</p>
-    </div>
-  );
+const events = {
+  TICKET_CREATED: "Ticket Created",
+  PACKAGE_RECEIVED: "Package Received",
+  IN_TRANSIT: "Package In Transit",
+  DELIVERY_FAILED: "Delivery Failed",
+  NOT_YET_SHIPPED: "Package Not Yet Shipped",
+  DELIVERED_TO_SENDER: "Package Delivered To Sender",
+  CANCELLED: "Cancelled",
+  AVAILABLE_FOR_PICKUP: "Available For Pickup",
+  WAITING_FOR_CUSTOMER_ACTION: "Waiting For Customer Action",
 };
-
-export const ShipmentDetails = () => {
+export const ShipmentDetails = ({ shipmentDetailsList }) => {
   const { t } = useTranslation();
   return (
     <div className="shipment-main-container">
       <h1 className="shipment-details-title">{t("shipment-details.title")}</h1>
       <div className="shipment-details-container">
-        <ShipmentRow
+        <ShipmentDetailsRow
           branch={t("shipment-details.branch")}
           date={t("shipment-details.date")}
           time={t("shipment-details.time")}
           details={t("shipment-details.details")}
           header={true}
         />
-        <ShipmentRow
-          branch={"madinat nasr city"}
-          date={t("shipment-details.date")}
-          time={t("shipment-details.time")}
-          details={t("shipment-details.details")}
-        />
-        <ShipmentRow
-          branch={t("shipment-details.branch")}
-          date={t("shipment-details.date")}
-          time={t("shipment-details.time")}
-          details={t("shipment-details.details")}
-        />
-        <ShipmentRow
-          branch={t("shipment-details.branch")}
-          date={t("shipment-details.date")}
-          time={t("shipment-details.time")}
-          details={t("shipment-details.details")}
-        />
-        <ShipmentRow
-          branch={t("shipment-details.branch")}
-          date={t("shipment-details.date")}
-          time={t("shipment-details.time")}
-          details={t("shipment-details.details")}
-        />
+        {shipmentDetailsList &&
+          shipmentDetailsList?.map((item, key) => (
+            <ShipmentDetailsRow
+              key={key}
+              branch={"madinat nasr city"}
+              date={ExtractDate(item?.timestamp).formattedDate}
+              time={ExtractDate(item?.timestamp).formattedTime}
+              details={events[item?.state]}
+            />
+          ))}
       </div>
     </div>
   );

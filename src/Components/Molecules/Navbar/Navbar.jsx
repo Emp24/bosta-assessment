@@ -31,7 +31,10 @@ export const Navbar = () => {
           <p className="center-div-item">{t("navbar.contactSales")}</p>
         </div>
         <div className="center-div">
-          <Dropdown options={options} direction="ltr">
+          <Dropdown
+            options={options}
+            direction={i18n.language === "ar" ? "rtl" : "ltr"}
+          >
             <ShipmentSearch />
           </Dropdown>
           <p className="center-div-item">{t("navbar.login")}</p>

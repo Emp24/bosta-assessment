@@ -11,6 +11,8 @@ export const ShipmentTrackingPage = () => {
     dispatch(getShipmentRequest("40106705"));
   }, []);
 
-  console.log(ExtractDate(shipment?.CreateDate));
-  return <ShipmentTrackingTemplate />;
+  console.log(shipment);
+  return (
+    <ShipmentTrackingTemplate shipmentDetailsList={shipment?.TransitEvents} />
+  );
 };

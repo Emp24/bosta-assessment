@@ -1,8 +1,12 @@
 import "./ShipmentSearch.css";
 import searchIcon from "../../../assets/Icons/search-icon.svg";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getShipmentRequest } from "../../../Services/modules/shipments";
 export const ShipmentSearch = ({ handleOnClick }) => {
   const [search, setSearch] = useState("");
+
+  const dispatch = useDispatch();
   return (
     <div style={{ width: "100%" }}>
       <h1 className="shipment-details-title">Track your shipment</h1>
@@ -16,7 +20,7 @@ export const ShipmentSearch = ({ handleOnClick }) => {
         <button
           className="search-button"
           onClick={() => {
-            handleOnClick(search);
+            dispatch(getShipmentRequest(search));
             console.log(search);
           }}
         >

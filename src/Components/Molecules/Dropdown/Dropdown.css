@@ -46,8 +46,8 @@
 
 /* RTL specific styles */
 .rtl .dropdown-menu {
-  left: auto;
-  right: 0;
+  left: 0;
+  right: auto;
 }
 
 .rtl .dropdown-menu li {
