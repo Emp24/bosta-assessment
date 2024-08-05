@@ -1,0 +1,20 @@
+{
+  "translations": {
+    "navbar": {
+      "home": "Home",
+      "prices": "Prices",
+      "contactSales": "Contact Sales",
+      "login": "Login"
+    },
+    "shipment-details": {
+      "title": "Shipment Details",
+      "branch": "Branch",
+      "date": "Date",
+      "time": "Time",
+      "details": "Details"
+    },
+    "delivery-address": {
+      "delivery-address": "Delivery Address"
+    }
+  }
+}

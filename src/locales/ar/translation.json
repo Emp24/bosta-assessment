@@ -1,0 +1,20 @@
+{
+  "translations": {
+    "navbar": {
+      "home": "الرئيسية",
+      "prices": "الاسعار",
+      "contactSales": "كلم المبيعات",
+      "login": "تسجيل الدخول"
+    },
+    "shipment-details": {
+      "title": "تفاصيل الشحنة",
+      "branch": "الفرع",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "details": "التفاصيل"
+    },
+    "delivery-address": {
+      "delivery-address": "عنوان التسليم"
+    }
+  }
+}

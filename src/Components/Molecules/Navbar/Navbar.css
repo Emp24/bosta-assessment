@@ -1,0 +1,62 @@
+.main-container {
+  border-bottom: 1px solid #ccc;
+}
+.main-inner-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-div p {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+.center-div-item {
+  margin: 10px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.red-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  font-weight: 800;
+}
+.logo-div {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-inner-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .center-div {
+    flex-direction: column; /* Stack the text vertically */
+  }
+
+  .center-div p {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .center-div-item {
+    margin: 5px; /* Reduce margin on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .center-div p {
+    font-size: 18px; /* Further reduce font size for very small screens */
+  }
+}
