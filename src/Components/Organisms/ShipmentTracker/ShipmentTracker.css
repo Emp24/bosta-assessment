@@ -35,7 +35,9 @@
   z-index: 1;
   /* margin-bottom: 5px; */
 }
-
+.step-icon.ltr {
+  transform: scaleX(-1);
+}
 .step-title {
   margin-top: 5px;
 }

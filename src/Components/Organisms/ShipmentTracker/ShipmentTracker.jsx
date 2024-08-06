@@ -4,6 +4,7 @@ import redCheckMark from "../../../assets/Icons/red-check-mark.svg";
 import greenCheckMark from "../../../assets/Icons/green-check-mark.svg";
 import orangeCheckMark from "../../../assets/Icons/orange-check-mark.svg";
 import truckIcon from "../../../assets/Icons/truck-icon.svg";
+import truckIconLtr from "../../../assets/Icons/truck-icon-ltr.svg";
 import fileIcon from "../../../assets/Icons/file-icon.svg";
 import { useTranslation } from "react-i18next";
 
@@ -103,7 +104,9 @@ export const ShipmentTracker = ({
                           currentStatus === "DELIVERED_TO_SENDER"
                         ? orangeCheckMark
                         : key === latestStateIndex
-                        ? truckIcon
+                        ? i18n.language === "ar"
+                          ? truckIcon
+                          : truckIconLtr
                         : fileIcon
                     }
                     alt="redCheckMark"
