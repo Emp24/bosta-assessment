@@ -45,7 +45,7 @@ export const ShipmentTracker = ({
           <p>{promisedDate}</p>
         </div>
       </div>
-      <div className="tracker-second-container">
+      <div className="steps-container">
         <div className="steps">
           <div className="step-icon">
             <img src={redCheckMark} alt="redCheckMark" height={30} width={30} />
