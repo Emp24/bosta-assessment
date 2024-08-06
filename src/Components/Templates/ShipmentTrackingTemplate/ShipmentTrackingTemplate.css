@@ -1,5 +1,7 @@
 .template-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
   margin-left: 120px;
   margin-right: 120px;
 }

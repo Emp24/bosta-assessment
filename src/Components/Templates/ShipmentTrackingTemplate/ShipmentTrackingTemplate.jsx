@@ -19,7 +19,9 @@ export const ShipmentTrackingTemplate = ({
       />
       <div className="template-container">
         <ShipmentDetails shipmentDetailsList={shipmentDetailsList} />
-        <AddressCard />
+        <div style={{ width: "auto" }}>
+          <AddressCard />
+        </div>
       </div>
     </>
   );
