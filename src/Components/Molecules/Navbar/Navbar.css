@@ -33,7 +33,17 @@
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
 }
-
+.main-container .burger-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.center-div.open {
+  display: flex;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .main-inner-container {
@@ -42,8 +52,15 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  .main-container .burger-menu {
+    display: flex;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+  }
   .center-div {
     flex-direction: column; /* Stack the text vertically */
+    display: none;
   }
 
   .center-div p {
@@ -52,6 +69,15 @@
 
   .center-div-item {
     margin: 5px; /* Reduce margin on smaller screens */
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  .logo-div {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
 

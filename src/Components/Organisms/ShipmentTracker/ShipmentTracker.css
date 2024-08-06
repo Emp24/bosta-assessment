@@ -46,6 +46,7 @@
   flex: 1;
   margin-left: -9px;
   margin-right: -9px;
+  border-radius: 10px;
 }
 .steps {
   display: flex;
@@ -93,7 +94,4 @@
   .tracker-row {
     grid-gap: 20px;
   }
-}
-
-@media (max-width: 480px) {
 }

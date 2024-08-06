@@ -35,7 +35,7 @@ export const ShipmentDetails = ({ shipmentDetailsList }) => {
           shipmentDetailsList?.map((item, key) => (
             <ShipmentDetailsRow
               key={key}
-              branch={"madinat nasr city"}
+              branch={"مدينة نصر"}
               date={ExtractDate(item?.timestamp).formattedDate}
               time={ExtractDate(item?.timestamp).formattedTime}
               details={events[item?.state]}

@@ -4,6 +4,8 @@ import arabiclogo from "../../../assets/Images/logo-arabic.svg";
 import englishLogo from "../../../assets/Images/logo-english.svg";
 import Dropdown from "../Dropdown/Dropdown";
 import { ShipmentSearch } from "../ShipmentSearch/ShipmentSearch";
+import burgerMenuIcon from "../../../assets/Icons/burger-menu.svg";
+import { useState } from "react";
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
 
@@ -19,8 +21,12 @@ export const Navbar = () => {
     }
     window.location.reload();
   };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <div className="main-container">
+    <nav className="main-container">
       <div className="main-inner-container">
         <div className="logo-div">
           <img
@@ -29,13 +35,23 @@ export const Navbar = () => {
             height={50}
             width={150}
           />
+
+          <img
+            src={burgerMenuIcon}
+            width={50}
+            height={50}
+            alt="burger-menu"
+            className="burger-menu"
+            onClick={toggleMenu}
+          />
         </div>
-        <div className="center-div">
+
+        <div className={`center-div ${isOpen ? "open" : ""}`}>
           <p className="center-div-item">{t("navbar.home")}</p>
           <p className="center-div-item">{t("navbar.prices")}</p>
           <p className="center-div-item">{t("navbar.contactSales")}</p>
         </div>
-        <div className="center-div">
+        <div className={`center-div ${isOpen ? "open" : ""}`}>
           <Dropdown
             direction={i18n.language === "ar" ? "rtl" : "ltr"}
             title={t("navbar.track-your-shipment")}
@@ -50,6 +66,6 @@ export const Navbar = () => {
           </p>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
