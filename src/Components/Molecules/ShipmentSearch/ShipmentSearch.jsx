@@ -26,7 +26,7 @@ export const ShipmentSearch = ({ handleOnClick, direction }) => {
           onClick={() => {
             if (search === "") return;
             dispatch(getShipmentRequest(search));
-            console.log(search);
+            setSearch("");
           }}
         >
           <img src={searchIcon} />

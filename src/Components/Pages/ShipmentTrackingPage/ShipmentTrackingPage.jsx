@@ -2,11 +2,12 @@ import { ShipmentTrackingTemplate } from "../../Templates/ShipmentTrackingTempla
 import { useDispatch, useSelector } from "react-redux";
 import { getShipmentRequest } from "../../../Services/modules/shipments";
 import { useEffect } from "react";
-import { ExtractDate } from "../../../utils/ExtractDate";
+import { FormatDate } from "../../../utils/ExtractDate";
+import { useTranslation } from "react-i18next";
 export const ShipmentTrackingPage = () => {
   const dispatch = useDispatch();
   const { shipment } = useSelector((state) => state.shipmentDetails);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     dispatch(getShipmentRequest("40106705"));
   }, []);
@@ -18,7 +19,11 @@ export const ShipmentTrackingPage = () => {
       shipmentNumber={shipment?.TrackingNumber}
       lastUpdate={shipment?.CurrentStatus?.timestamp}
       currentStatus={shipment?.CurrentStatus?.state}
-      promisedDate={ExtractDate(shipment?.PromisedDate).formattedDate}
+      promisedDate={
+        i18n.language === "ar"
+          ? FormatDate(shipment?.PromisedDate, "ar-EG")
+          : FormatDate(shipment?.PromisedDate)
+      }
     />
   );
 };

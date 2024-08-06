@@ -2,7 +2,11 @@ import "./ShipmentTracker.css";
 
 import redCheckMark from "../../../assets/Icons/red-check-mark.svg";
 import { useTranslation } from "react-i18next";
-import { ExtractDate } from "../../../utils/ExtractDate";
+import {
+  ExtractDate,
+  ExtractDayAr,
+  ExtractDayEn,
+} from "../../../utils/ExtractDate";
 const status = {
   DELIVERED_TO_SENDER: "Delivered To Sender",
   CANCELLED: "Cancelled",
@@ -14,7 +18,7 @@ export const ShipmentTracker = ({
   currentStatus,
   promisedDate,
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className="tracker-main-container">
       <div className="tracker-first-container">
@@ -37,7 +41,9 @@ export const ShipmentTracker = ({
             {status[currentStatus]}
           </p>
           <p>
-            الاثنين
+            {i18n.language === "ar"
+              ? ExtractDayAr(lastUpdate)
+              : ExtractDayEn(lastUpdate)}
             {" " + ExtractDate(lastUpdate).formattedDate + " "}{" "}
             {ExtractDate(lastUpdate).formattedTime + " "}{" "}
           </p>

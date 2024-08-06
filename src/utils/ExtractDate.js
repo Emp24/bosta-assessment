@@ -19,3 +19,36 @@ export const ExtractDate = (timestamp) => {
 
   return { formattedDate, formattedTime };
 };
+
+export const ExtractDayAr = (timestamp) => {
+  if (timestamp) {
+    const date = new Date(timestamp);
+    const formatter = new Intl.DateTimeFormat("ar", { weekday: "long" });
+    return formatter.format(date);
+  }
+  return null;
+};
+
+export const ExtractDayEn = (timestamp) => {
+  if (timestamp) {
+    const date = new Date(timestamp);
+    return date.toLocaleDateString("en-US", { weekday: "long" });
+  }
+  return null;
+};
+
+export const FormatDate = (timestamp, locale = "en-US") => {
+  if (timestamp) {
+    const date = new Date(timestamp);
+    const monthNames = new Intl.DateTimeFormat(locale, {
+      month: "long",
+    }).formatToParts(date);
+
+    const monthName = monthNames.find((part) => part.type === "month").value;
+
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    return `${day} ${monthName} ${year}`;
+  }
+};
