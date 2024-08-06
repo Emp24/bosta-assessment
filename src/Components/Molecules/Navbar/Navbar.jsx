@@ -34,7 +34,9 @@ export const Navbar = () => {
             direction={i18n.language === "ar" ? "rtl" : "ltr"}
             title={t("navbar.track-your-shipment")}
           >
-            <ShipmentSearch />
+            <ShipmentSearch
+              direction={i18n.language === "ar" ? "rtl" : "ltr"}
+            />
           </Dropdown>
           <p className="center-div-item">{t("navbar.login")}</p>
           <p className="red-btn" onClick={changeLanguage}>

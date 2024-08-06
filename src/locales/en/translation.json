@@ -28,6 +28,10 @@
       "shipment-received-from-vendor": "Shipment received From Vendor",
       "shipment-out-for-delivery": "Shipment Out For Delivery",
       "shipment-delivered": "Shipment Delivered"
+    },
+
+    "shipment-search": {
+      "placeholder": "Tracking number"
     }
   }
 }

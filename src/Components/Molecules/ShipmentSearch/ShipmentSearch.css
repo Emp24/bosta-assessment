@@ -3,9 +3,14 @@
   /* border: 1px solid gainsboro; */
   border: none;
   height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
   width: 100%;
 }
-
+.shipment-search-title {
+  color: #8f9bb2;
+  font-size: 18px;
+}
 .search-bar:focus {
   outline: none;
 }
@@ -19,9 +24,23 @@
   width: 60px;
 }
 
+.search-button:hover {
+  outline: none;
+  background-color: brown;
+}
+
 .search-container {
   border-radius: 6px;
   border: 1px solid gainsboro;
   width: 100%;
   display: flex;
+}
+
+.rtl .search-button {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.ltr .search-button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }

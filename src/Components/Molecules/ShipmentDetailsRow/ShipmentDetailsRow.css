@@ -27,5 +27,7 @@
   font-size: 14px;
 }
 .shipment-row p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #40485e;
 }

@@ -28,6 +28,9 @@
       "shipment-received-from-vendor": "تم استلام الشحنة من البائع",
       "shipment-out-for-delivery": "تم إرسال الشحنة للتسليم",
       "shipment-delivered": "تم تسليم الشحنة"
+    },
+    "shipment-search": {
+      "placeholder": "رقم التتبع"
     }
   }
 }
