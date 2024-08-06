@@ -42,6 +42,10 @@
       "package-delivery-failed": "لم يتم تسليم الشحنة",
       "package-waiting-for-customer": "العميل غير متواجد بالعنوان",
       "package-available-for-pickup": "متاح للاستلام"
+    },
+    "support": {
+      "title": "هل يوجد مشكلة في شحنتك ؟",
+      "button": "ابلاغ عن مشكلة"
     }
   }
 }

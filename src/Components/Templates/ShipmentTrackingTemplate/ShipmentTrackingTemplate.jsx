@@ -1,5 +1,6 @@
 import { AddressCard } from "../../Molecules/AddressCard/AddressCard";
 import { ShipmentDetails } from "../../Molecules/ShipmentDetails/ShipmentDetails";
+import { SupportCard } from "../../Molecules/SupportCard/SupportCard";
 import { ShipmentTracker } from "../../Organisms/ShipmentTracker/ShipmentTracker";
 import "./ShipmentTrackingTemplate.css";
 export const ShipmentTrackingTemplate = ({
@@ -23,6 +24,7 @@ export const ShipmentTrackingTemplate = ({
           <ShipmentDetails shipmentDetailsList={shipmentDetailsList} />
           <div>
             <AddressCard />
+            <SupportCard />
           </div>
         </div>
       </main>

@@ -43,6 +43,10 @@
       "package-delivery-failed": "Delivery Failed",
       "package-waiting-for-customer": "Customer not present at home",
       "package-available-for-pickup": "Available for pickup"
+    },
+    "support": {
+      "title": "Is there a problem with your shipment?",
+      "button": "Report a problem"
     }
   }
 }
