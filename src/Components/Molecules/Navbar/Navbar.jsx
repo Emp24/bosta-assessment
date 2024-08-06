@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
-import logo from "../../../assets/Images/image.svg";
+import arabiclogo from "../../../assets/Images/logo-arabic.svg";
+import englishLogo from "../../../assets/Images/logo-english.svg";
 import Dropdown from "../Dropdown/Dropdown";
 import { ShipmentSearch } from "../ShipmentSearch/ShipmentSearch";
 export const Navbar = () => {
@@ -22,7 +23,12 @@ export const Navbar = () => {
     <div className="main-container">
       <div className="main-inner-container">
         <div className="logo-div">
-          <img src={logo} alt="logo" height={50} width={150} />
+          <img
+            src={i18n.language === "ar" ? arabiclogo : englishLogo}
+            alt="logo"
+            height={50}
+            width={150}
+          />
         </div>
         <div className="center-div">
           <p className="center-div-item">{t("navbar.home")}</p>
