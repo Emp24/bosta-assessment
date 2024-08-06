@@ -1,8 +1,8 @@
 import "./Dropdown.css";
-const Dropdown = ({ options, direction, children }) => {
+const Dropdown = ({ direction, children, title }) => {
   return (
     <div className={`dropdown ${direction}`}>
-      <p className="red-btn">Track your shipment</p>
+    <p className="red-btn">{title}</p>
       <div className="dropdown-menu">{children}</div>
     </div>
   );

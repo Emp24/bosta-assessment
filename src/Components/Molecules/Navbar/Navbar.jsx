@@ -6,7 +6,6 @@ import { ShipmentSearch } from "../ShipmentSearch/ShipmentSearch";
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
 
-  const options = ["Option 1", "Option 2", "Option 3"];
   const changeLanguage = () => {
     i18n.language === "en"
       ? i18n.changeLanguage("ar")
@@ -32,8 +31,8 @@ export const Navbar = () => {
         </div>
         <div className="center-div">
           <Dropdown
-            options={options}
             direction={i18n.language === "ar" ? "rtl" : "ltr"}
+            title={t("navbar.track-your-shipment")}
           >
             <ShipmentSearch />
           </Dropdown>

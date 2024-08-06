@@ -1,5 +1,4 @@
 export const ExtractDate = (timestamp) => {
-  console.log(timestamp);
   const date = new Date(timestamp);
   const day = date.getUTCDate().toString().padStart(2, "0");
   const month = (date.getUTCMonth() + 1).toString().padStart(2, "0"); // Months are zero-indexed

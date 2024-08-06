@@ -4,7 +4,8 @@
       "home": "الرئيسية",
       "prices": "الاسعار",
       "contactSales": "كلم المبيعات",
-      "login": "تسجيل الدخول"
+      "login": "تسجيل الدخول",
+      "track-your-shipment": "تتبع شحنتك"
     },
     "shipment-details": {
       "title": "تفاصيل الشحنة",
@@ -15,6 +16,18 @@
     },
     "delivery-address": {
       "delivery-address": "عنوان التسليم"
+    },
+    "shipment-tracker": {
+      "shipment-number": "رقم الشحنة",
+      "last-update": "آخر تحديث",
+      "vendor-name": "اسم البائع",
+      "delivery-date": "تاريخ التسليم"
+    },
+    "shipment-states": {
+      "shipment-created": "تم إنشاء الشحنة",
+      "shipment-received-from-vendor": "تم استلام الشحنة من البائع",
+      "shipment-out-for-delivery": "تم إرسال الشحنة للتسليم",
+      "shipment-delivered": "تم تسليم الشحنة"
     }
   }
 }

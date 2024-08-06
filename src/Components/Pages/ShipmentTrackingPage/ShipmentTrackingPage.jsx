@@ -13,6 +13,12 @@ export const ShipmentTrackingPage = () => {
 
   console.log(shipment);
   return (
-    <ShipmentTrackingTemplate shipmentDetailsList={shipment?.TransitEvents} />
+    <ShipmentTrackingTemplate
+      shipmentDetailsList={shipment?.TransitEvents}
+      shipmentNumber={shipment?.TrackingNumber}
+      lastUpdate={shipment?.CurrentStatus?.timestamp}
+      currentStatus={shipment?.CurrentStatus?.state}
+      promisedDate={ExtractDate(shipment?.PromisedDate).formattedDate}
+    />
   );
 };

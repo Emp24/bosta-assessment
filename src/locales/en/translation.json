@@ -4,7 +4,8 @@
       "home": "Home",
       "prices": "Prices",
       "contactSales": "Contact Sales",
-      "login": "Login"
+      "login": "Login",
+      "track-your-shipment": "Track your shipment"
     },
     "shipment-details": {
       "title": "Shipment Details",
@@ -15,6 +16,18 @@
     },
     "delivery-address": {
       "delivery-address": "Delivery Address"
+    },
+    "shipment-tracker": {
+      "shipment-number": "Shipment Number",
+      "last-update": "Last Update",
+      "vendor-name": "Vendor Name",
+      "delivery-date": "Delivery Date"
+    },
+    "shipment-states": {
+      "shipment-created": "Shipment Created",
+      "shipment-received-from-vendor": "Shipment received From Vendor",
+      "shipment-out-for-delivery": "Shipment Out For Delivery",
+      "shipment-delivered": "Shipment Delivered"
     }
   }
 }
