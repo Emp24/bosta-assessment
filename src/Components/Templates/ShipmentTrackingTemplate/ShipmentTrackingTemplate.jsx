@@ -17,6 +17,7 @@ export const ShipmentTrackingTemplate = ({
           lastUpdate={lastUpdate}
           currentStatus={currentStatus}
           promisedDate={promisedDate}
+          shipmentDetailsList={shipmentDetailsList}
         />
         <div className="template-second-half">
           <ShipmentDetails shipmentDetailsList={shipmentDetailsList} />

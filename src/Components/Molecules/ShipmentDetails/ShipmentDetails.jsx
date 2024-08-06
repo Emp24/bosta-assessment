@@ -3,19 +3,23 @@ import "./ShipmentDetails.css";
 import { ShipmentDetailsRow } from "../ShipmentDetailsRow/ShipmentDetailsRow";
 import { ExtractDate } from "../../../utils/ExtractDate";
 
-const events = {
-  TICKET_CREATED: "Ticket Created",
-  PACKAGE_RECEIVED: "Package Received",
-  IN_TRANSIT: "Package In Transit",
-  DELIVERY_FAILED: "Delivery Failed",
-  NOT_YET_SHIPPED: "Package Not Yet Shipped",
-  DELIVERED_TO_SENDER: "Package Delivered To Sender",
-  CANCELLED: "Cancelled",
-  AVAILABLE_FOR_PICKUP: "Available For Pickup",
-  WAITING_FOR_CUSTOMER_ACTION: "Waiting For Customer Action",
-};
 export const ShipmentDetails = ({ shipmentDetailsList }) => {
   const { t } = useTranslation();
+  const events = {
+    TICKET_CREATED: t("shipment-states.shipment-created"),
+    PACKAGE_RECEIVED: t("shipment-states.shipment-received-from-vendor"),
+    IN_TRANSIT: t("shipment-states.shipment-out-for-delivery"),
+    DELIVERY_FAILED: t("shipment-statuses.package-delivery-failed"),
+    NOT_YET_SHIPPED: t("shipment-statuses.package-not-yet-shipped"),
+    DELIVERED_TO_SENDER: t("shipment-statuses.package-delivered-to-sender"),
+    CANCELLED: t("shipment-statuses.package-cancelled"),
+    AVAILABLE_FOR_PICKUP: t("shipment-statuses.package-available-for-pickup"),
+    WAITING_FOR_CUSTOMER_ACTION: t(
+      "shipment-statuses.package-waiting-for-customer"
+    ),
+    DELIVERED: t("shipment-statuses.package-delivered"),
+    OUT_FOR_DELIVERY: t("shipment-states.shipment-out-for-delivery"),
+  };
   return (
     <div className="shipment-main-container">
       <h1 className="shipment-details-title">{t("shipment-details.title")}</h1>

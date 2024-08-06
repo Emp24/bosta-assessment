@@ -32,6 +32,17 @@
 
     "shipment-search": {
       "placeholder": "Tracking number"
+    },
+    "shipment-statuses": {
+      "package-delivered-to-sender": "Delivered To Sender",
+      "package-cancelled": "Cancelled",
+      "package-delivered": "Delivered",
+      "package-in-transit": "Package In Transit",
+      "package-received": "Package Received",
+      "package-not-yet-shipped": "Package Not Yet Shipped",
+      "package-delivery-failed": "Delivery Failed",
+      "package-waiting-for-customer": "Customer not present at home",
+      "package-available-for-pickup": "Available for pickup"
     }
   }
 }

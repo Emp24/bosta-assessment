@@ -25,12 +25,23 @@
     },
     "shipment-states": {
       "shipment-created": "تم إنشاء الشحنة",
-      "shipment-received-from-vendor": "تم استلام الشحنة من البائع",
+      "shipment-received-from-vendor": "تم استلام الشحنة من التاجر",
       "shipment-out-for-delivery": "تم إرسال الشحنة للتسليم",
       "shipment-delivered": "تم تسليم الشحنة"
     },
     "shipment-search": {
       "placeholder": "رقم التتبع"
+    },
+    "shipment-statuses": {
+      "package-delivered-to-sender": "تم إرجاع الشحنة للتاجر",
+      "package-cancelled": "ألغيت",
+      "package-delivered": "تم تسليم الشحنة",
+      "package-in-transit": "الشحنة خرجت للتسليم",
+      "package-received": "تم استلام الشحنة من التاجر",
+      "package-not-yet-shipped": "لم تخرج الشحنة للتسليم",
+      "package-delivery-failed": "لم يتم تسليم الشحنة",
+      "package-waiting-for-customer": "العميل غير متواجد بالعنوان",
+      "package-available-for-pickup": "متاح للاستلام"
     }
   }
 }
