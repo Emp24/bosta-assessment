@@ -11,18 +11,20 @@ export const ShipmentTrackingTemplate = ({
 }) => {
   return (
     <>
-      <ShipmentTracker
-        shipmentNumber={shipmentNumber}
-        lastUpdate={lastUpdate}
-        currentStatus={currentStatus}
-        promisedDate={promisedDate}
-      />
-      <div className="template-container">
-        <ShipmentDetails shipmentDetailsList={shipmentDetailsList} />
-        <div style={{ width: "auto" }}>
-          <AddressCard />
+      <main className="template-container">
+        <ShipmentTracker
+          shipmentNumber={shipmentNumber}
+          lastUpdate={lastUpdate}
+          currentStatus={currentStatus}
+          promisedDate={promisedDate}
+        />
+        <div className="template-second-half">
+          <ShipmentDetails shipmentDetailsList={shipmentDetailsList} />
+          <div>
+            <AddressCard />
+          </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

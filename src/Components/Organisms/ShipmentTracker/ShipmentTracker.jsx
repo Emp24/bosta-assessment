@@ -62,7 +62,7 @@ export const ShipmentTracker = ({
           <img src={redCheckMark} alt="redCheckMark" height={30} width={30} />
           <div className="step-bar" />
         </div>
-        <div className="tracker-row second-row-font">
+        <div className="tracker-row third-row-font">
           <p>{t("shipment-states.shipment-created")}</p>
           <p>{t("shipment-states.shipment-received-from-vendor")}</p>
           <p>{t("shipment-states.shipment-out-for-delivery")}</p>

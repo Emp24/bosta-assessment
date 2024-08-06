@@ -4,8 +4,8 @@
 .main-inner-container {
   display: flex;
   justify-content: space-between;
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .center-div {
   display: flex;

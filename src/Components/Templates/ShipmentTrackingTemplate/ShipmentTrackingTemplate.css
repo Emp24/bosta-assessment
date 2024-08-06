@@ -1,7 +1,10 @@
-.template-container {
+.template-second-half {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 50px;
-  margin-left: 120px;
-  margin-right: 120px;
+}
+
+.template-container {
+  margin-left: 5%;
+  margin-right: 5%;
 }
