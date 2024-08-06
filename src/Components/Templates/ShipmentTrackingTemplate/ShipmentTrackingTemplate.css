@@ -8,3 +8,17 @@
   margin-left: 5%;
   margin-right: 5%;
 }
+@media (max-width: 768px) {
+  .template-second-half {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .template-container {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media (max-width: 480px) {
+}

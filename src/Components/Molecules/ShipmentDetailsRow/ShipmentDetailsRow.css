@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto; /* Adjust this based on your layout needs */
   gap: 10px; /* Space between grid items */
-  align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 4%;

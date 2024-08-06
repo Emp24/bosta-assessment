@@ -57,7 +57,7 @@
 .tracker-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: center;
+  grid-gap: 10px;
 }
 
 .first-row-font {
@@ -76,4 +76,12 @@
   font-weight: 800;
   font-size: 16px;
   color: #242c46;
+}
+@media (max-width: 768px) {
+  .tracker-row {
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
 }
