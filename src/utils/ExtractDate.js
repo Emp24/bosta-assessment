@@ -15,7 +15,7 @@ export const ExtractDate = (timestamp) => {
   // Format time as hh:mm:ss AM/PM
   const formattedTime = `${hours
     .toString()
-    .padStart(2, "0")}:${minutes} ${ampm}`;
+    .padStart(2, "0")}:${minutes}${ampm}`;
 
   return { formattedDate, formattedTime };
 };
