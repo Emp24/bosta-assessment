@@ -67,3 +67,18 @@
 .rtl .dropdown-menu li {
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .rtl .dropdown-menu {
+    left: -80%;
+    right: -80%;
+  }
+  .dropdown-menu {
+    left: -40%;
+    right: -40%;
+    border-top-left-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+}
