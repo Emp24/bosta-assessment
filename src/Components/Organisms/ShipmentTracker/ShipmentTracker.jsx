@@ -126,18 +126,20 @@ export const ShipmentTracker = ({
                     }
                   />
                 </div>
-                <div
-                  className={`step-bar ${
-                    (key <= latestStateIndex - 1 || latestStateIndex === 3) &&
-                    (currentStatus === "DELIVERED"
-                      ? "completed"
-                      : currentStatus === "CANCELLED"
-                      ? "cancelled"
-                      : currentStatus === "DELIVERED_TO_SENDER"
-                      ? "delivered-to-sender"
-                      : "")
-                  }`}
-                />
+                {key < 3 && (
+                  <div
+                    className={`step-bar ${
+                      (key <= latestStateIndex - 1 || latestStateIndex === 3) &&
+                      (currentStatus === "DELIVERED"
+                        ? "completed"
+                        : currentStatus === "CANCELLED"
+                        ? "cancelled"
+                        : currentStatus === "DELIVERED_TO_SENDER"
+                        ? "delivered-to-sender"
+                        : "")
+                    }`}
+                  />
+                )}
               </>
             );
           })}
