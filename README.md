@@ -1,4 +1,4 @@
-#How to run
+# How to run
 
 1. Clone the project
 2. Run "npm install" to install the packages
